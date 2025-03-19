@@ -15,7 +15,8 @@ jobs:
               with:
                 node-version: '20.x'
             - name: Install dependencies
-              run: nmp ci
+              run: npm ci
+              working-directory: 04-using-actions/react-app
 
 
 
