@@ -1,5 +1,7 @@
 name: 07 - Using Expressions
 
+run-name: "07 - Using Expressions | DEBUG - ${{ inputs.debug && 'ON' || 'OFF' }}"
+
 on:
     push:
     workflow_dispatch:
@@ -16,7 +18,7 @@ jobs:
               if: inputs.debug
               run: |
                 echo "Triggered by: ${{ github.event_name }}"
-                echo "Branch: ${{ github.ref }}"
+                echo "Branch: ${{ github.ref }}. Shortname: ${{ github.ref_name }}"
                 echo "Commit SHA: ${{ github.sha }}"
                 echo "Runner OS: ${{ runner.os }}"
 
