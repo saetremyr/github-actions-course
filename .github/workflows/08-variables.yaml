@@ -48,7 +48,7 @@ jobs:
               run: |
                 echo "Repo var: ${{ vars.REPOSITORY_VAR }}"
         
-    echo3:
+    echo-environment:
         runs-on: ubuntu-latest
 
         environment: ${{ inputs.environment }}
