@@ -8,6 +8,10 @@ env:
 on:
     push:
     workflow_dispatch:
+        inputs:
+            environment:
+                type: environment
+
 
 jobs:
     echo:
@@ -45,7 +49,7 @@ jobs:
     echo3:
         runs-on: ubuntu-latest
 
-        environment: prod
+        environment: ${{ inputs.environment }}
 
         steps:
             - name: Print Prod Variables
