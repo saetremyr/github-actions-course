@@ -1,5 +1,7 @@
 name: 08 - Using Variables
 
+run-name: "07 - Using Expressions | ${{ inputs.environment }}"
+
 env:
     WORKFLOW_VAR: "I am a workflow env var"
     OVERWRITTEN: "I will be overwritten"
