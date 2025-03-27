@@ -6,7 +6,7 @@ env:
     UNDEFINED_VAR_WITH_DEFAULT: ${{ vars.UNDEFINED_VAR || 'default value' }}
 
 on:
-    push:
+    #push:
     workflow_dispatch:
         inputs:
             environment:
@@ -52,7 +52,7 @@ jobs:
         environment: ${{ inputs.environment }}
 
         steps:
-            - name: Print Prod Variables
+            - name: Print Environment Variables based on selected environment
               run: |
                 echo "Org overwritten var: ${{ vars.OVERWRITTEN_VAR }}"
                 echo "Repo var: ${{ vars.REPOSITORY_VAR }}"
