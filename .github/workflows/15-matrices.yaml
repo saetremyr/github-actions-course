@@ -57,4 +57,4 @@ jobs:
         steps:
             - name: Dummy step
               run: |
-                echo: "${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.shape }}"
+                echo "${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.shape }}"
