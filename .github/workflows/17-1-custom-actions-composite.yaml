@@ -30,4 +30,4 @@ jobs:
             - name: Test
               run: npm run test
             - name: Build
-              run: nom run build
+              run: npm run build
